@@ -1,10 +1,12 @@
-# Gogoplate
+# Zebi Scaper
 
-This is the repository made with golang.
--   hot reload with air 
--   postgres database
--   github configuration
--   uses conventions
+This is the repository made with my go temple gogoleplate.
+
+##Todo
+
+- [ ] Instagram followers scraping 
+- [ ] Send rapport by email
+
 
 ## Requirements
 
@@ -32,7 +34,7 @@ You will need 2 files placed at the root of your project : `public.pem` and `pri
 
 If you want to contribute to the project you'll need to name your commits according to the following convention :
 
-    type (optional scope): description.
+    type(action): description.
 
 The following types are available :
 
@@ -59,4 +61,4 @@ the available routes are the following :
 
 | route                       | method | description                       | params          | response                |
 | --------------------------- | ------ | --------------------------------- | --------------- | ----------------------- |
-| `/hello`                      | GET    | check if the api is available     | none            | `Hello world!`          |
+| `/hello`                    | GET    | check if the api is available     | none            | `Hello world!`          |
