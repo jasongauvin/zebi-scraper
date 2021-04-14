@@ -1,0 +1,6 @@
+api/tmp/**
+.idea/**
+tmp
+.env
+public.pem
+private.pem
