@@ -2,7 +2,7 @@
 
 This is the repository made with my go temple gogoleplate.
 
-##Todo
+## Todo
 
 - [ ] Instagram followers scraping 
 - [ ] Send rapport by email
@@ -18,9 +18,18 @@ If you want to develop on this project it's recommended to have `golang` install
 First you need to created your `.env` file (you can use the .env.dist file).
 
 ```sh
-  docker-compose up --build
+  make init
+```
+After your first init, you can run the project with : 
+
+```sh
+  make start
 ```
 
+For stop : 
+```sh
+  make stop
+```
 ### RSA keys (needed to generate and read tokens)
 
 You will need 2 files placed at the root of your project : `public.pem` and `private.pem`.
