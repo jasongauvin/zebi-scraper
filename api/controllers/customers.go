@@ -32,10 +32,12 @@ func Register(c *gin.Context) {
 		Name:           customerForm.Name,
 		Email:          customerForm.Email,
 		HashedPassword: services.HashPassword(customerForm.Password),
+		Role:           customerForm.Role,
 	}
 
 	if err = repositories.CreateCustomer(&customer); err != nil {
 		c.JSON(http.StatusInternalServerError, "Error while saving user informations in database")
+		return
 	}
 
 	c.JSON(http.StatusOK, "user successfully created!")
@@ -63,14 +65,14 @@ func Login(c *gin.Context) {
 	err = repositories.FindCustomerByEmail(&customer)
 
 	if err != nil {
-		c.JSON(http.StatusUnauthorized, "Email ou mot de passe incorrect.")
+		c.JSON(http.StatusUnauthorized, "Customer not find.")
 		return
 	}
 
 	// Verify password
 	hashedPwd := services.HashPassword(customerForm.Password)
 	if hashedPwd != customer.HashedPassword {
-		c.JSON(http.StatusUnauthorized, "Email ou mot de passe incorrect.")
+		c.JSON(http.StatusUnauthorized, "Email or password incorrect.")
 		return
 	}
 
@@ -82,6 +84,6 @@ func Login(c *gin.Context) {
 	}
 	validTime, _ := strconv.ParseInt(config.GoDotEnvVariable("TOKEN_VALID_DURATION"), 10, 64)
 
-	c.SetCookie("token", token, 60*int(validTime), "/", config.GoDotEnvVariable("DOMAIN"), false, false)
+	c.SetCookie("Bearer", token, 60*int(validTime), "/", config.GoDotEnvVariable("DOMAIN"), false, false)
 	c.JSON(http.StatusOK, token)
 }
