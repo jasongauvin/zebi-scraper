@@ -9,11 +9,12 @@ import (
 func InitializeRoutes(r *gin.Engine) {
 	// HTML routes for the GUI
 	r.GET("/", controllers.SayHello)
+	r.POST("/register", controllers.Register)
+	r.POST("/login", controllers.Login)
+
 
 	// API routes
-	api := r.Group("/api")
-	{
-		api.GET("/register", controllers.Register)
-		api.GET("/login", controllers.Login)
-	}
+	// api := r.Group("/api")
+	// {
+	// }
 }
