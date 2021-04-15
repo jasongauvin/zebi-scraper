@@ -6,7 +6,7 @@ start: ## Start the app containers
 	docker-compose up --build -d
 
 init: ## refresh the env file, generate public and private RSA keys and start the app
-	copy-dist-file
+	copy-dist-files
 	generate-keys
 	make start
 
