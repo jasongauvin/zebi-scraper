@@ -6,8 +6,8 @@ start: ## Start the app containers
 	docker-compose up --build -d
 
 init: ## refresh the env file, generate public and private RSA keys and start the app
-	copy-dist-files
-	generate-keys
+	make copy-dist-files
+	make generate-keys
 	make start
 
 logs: ## Open logs for docker
@@ -20,9 +20,8 @@ generate-keys: ## Generate public and private RSA keys
 copy-dist-files: ## Copy dist files
 	cp .env.dist .env
 
-
 stop: ## stop all running containers of the application
 	docker-compose stop
 
-delete: ## Delete all docker containers and volumes on your computer
+paf: ## Delete all docker containers and volumes on your computer
 	docker system prune --volumes -a -f
