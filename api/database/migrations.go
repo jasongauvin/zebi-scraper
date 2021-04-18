@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/jasongauvin/gogoleplate/api/models"
+	"github.com/jasongauvin/zebi-scraper/api/models"
 )
 
 func MakeMigrations() {

@@ -3,8 +3,8 @@ package repositories
 import (
 	"errors"
 
-	"github.com/jasongauvin/gogoleplate/api/database"
-	"github.com/jasongauvin/gogoleplate/api/models"
+	"github.com/jasongauvin/zebi-scraper/api/database"
+	"github.com/jasongauvin/zebi-scraper/api/models"
 	"github.com/jinzhu/gorm"
 )
 

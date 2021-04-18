@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
-	"github.com/jasongauvin/gogoleplate/api/config"
+	"github.com/jasongauvin/zebi-scraper/api/config"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -5,9 +5,9 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jasongauvin/GAUVIN_JASON/api/models"
-	"github.com/jasongauvin/GAUVIN_JASON/api/repositories"
-	"github.com/jasongauvin/GAUVIN_JASON/api/services"
+	"github.com/jasongauvin/zebi-scraper/api/models"
+	"github.com/jasongauvin/zebi-scraper/api/repositories"
+	"github.com/jasongauvin/zebi-scraper/api/services"
 )
 
 // GetCustomer used the token and check request authorization in header for return customer

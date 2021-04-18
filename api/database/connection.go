@@ -25,7 +25,7 @@ type Config struct {
 func Connect(cfg Config) {
 	var err error
 	dbURL := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%d sslmode=disable", cfg.DbHost, cfg.DbUser, cfg.DbPassword, cfg.DbName, cfg.DbPort)
-
+fmt.Println(dbURL)
 	DB, err = gorm.Open(postgres.Open(dbURL), &gorm.Config{})
 
 	if err != nil {

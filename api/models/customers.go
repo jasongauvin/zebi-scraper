@@ -23,7 +23,6 @@ type CustomerForm struct {
 	Email    string `gorm:"size:255"`
 	Password string `gorm:"size:255"`
 	Role     string `gorm:"size:255"`
-
 }
 
 // ValidateCustomer takes a user as parameter and check if its properties are valid

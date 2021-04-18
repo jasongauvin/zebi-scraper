@@ -11,7 +11,7 @@ LABEL maintainer="Jason Gauvin <contact.jason.gauvin@gmail.com>"
 RUN apk update && apk add --no-cache git
 
 # Set the current working directory inside the container
-WORKDIR /go/src/github.com/jasongauvin/gogoleplate/api
+WORKDIR /go/src/github.com/jasongauvin/zebi-scraper/api
 
 # Copy the source from the current directory to the working Directory inside the container
 COPY . .

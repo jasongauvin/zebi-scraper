@@ -1,15 +1,15 @@
 package middleware
 
 import (
-	"github.com/jasongauvin/GAUVIN_JASON/api/helpers"
+	"github.com/jasongauvin/zebi-scraper/api/helpers"
 	"net/http"
 	"strings"
 
-	"github.com/jasongauvin/GAUVIN_JASON/api/models"
-	"github.com/jasongauvin/GAUVIN_JASON/api/repositories"
+	"github.com/jasongauvin/zebi-scraper/api/models"
+	"github.com/jasongauvin/zebi-scraper/api/repositories"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jasongauvin/GAUVIN_JASON/api/services"
+	"github.com/jasongauvin/zebi-scraper/api/services"
 )
 
 // CheckAuthorization used the find token and check request authorization in header
