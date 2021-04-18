@@ -5,10 +5,10 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jasongauvin/gogoleplate/api/config"
-	"github.com/jasongauvin/gogoleplate/api/models"
-	"github.com/jasongauvin/gogoleplate/api/repositories"
-	"github.com/jasongauvin/gogoleplate/api/services"
+	"github.com/jasongauvin/zebi-scraper/api/config"
+	"github.com/jasongauvin/zebi-scraper/api/models"
+	"github.com/jasongauvin/zebi-scraper/api/repositories"
+	"github.com/jasongauvin/zebi-scraper/api/services"
 )
 
 // Register takes a json object with password as parameter, hash password and persists a user into the DB
